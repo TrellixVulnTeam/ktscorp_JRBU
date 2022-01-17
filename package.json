@@ -1,0 +1,29 @@
+{
+  "name": "myexpress",
+  "version": "1.0.0",
+  "description": "Chuyen phat nhanh",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect src/app.js",
+    "cssgen": "node-sass -w src/mysrc/sass/myapp.scss src/public/css/myapp.css"
+  },
+  "author": "JackForez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0",
+    "mysql2": "^2.3.2",
+    "parcel-tracker-api": "^1.2.0",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13",
+    "sass": "^1.43.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}

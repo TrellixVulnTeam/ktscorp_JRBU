@@ -61,6 +61,7 @@ let postRegister = async (req, res) => {
 let getTestDB = (req, res) => {
 
     // res.render("login");
+    //abc
     connectDB();
 }
 let getAbout = (req, res) => {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KTSCORP.VN - Your new ways</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            /* background-color: #ff5f13; */
+        }
+
+        .container {
+            /* The image used */
+            background-image: url("assets/img/hero/about.jpg");
+            /* Full height */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: brightness(25%);
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wrapper {
+            padding: 10px;
+            width: 50vw;
+            backdrop-filter: blur(10px);
+
+            text-align: center;
+            /* margin-top: 25%; */
+        }
+
+        .text {
+            font-family: "Barlow", sans-serif;
+            color: #ff5f13;
+        }
+
+        .white {
+            font-family: "Barlow", sans-serif;
+            color: aliceblue;
+        }
+
+        .black {
+            background-color: #ff5f13;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="text">COMING SOON</h1>
+            <h3 class="text">Chúng tôi đang làm vài thứ cho bạn</h3>
+            <!-- <div class="black"> -->
+            <h3 id="demo" class="white"></h3>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 7, 2022 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "D - " + hours + "H - "
+                + minutes + "M - " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

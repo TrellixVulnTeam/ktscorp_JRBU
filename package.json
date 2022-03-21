@@ -1,5 +1,5 @@
 {
-  "name": "myexpress",
+  "name": "ktscorp",
   "version": "1.0.0",
   "description": "Chuyen phat nhanh",
   "main": "app.js",
@@ -11,11 +11,13 @@
   "author": "JackForez",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "jquery": "^3.6.0",
-    "jsdom": "^19.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.2",
     "parcel-tracker-api": "^1.2.0",
     "sequelize": "^6.7.0"
@@ -25,5 +27,16 @@
     "nodemon": "^2.0.13",
     "sass": "^1.43.2",
     "sequelize-cli": "^6.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackforez/ktscorp.git"
+  },
+  "keywords": [
+    "ktscorp"
+  ],
+  "bugs": {
+    "url": "https://github.com/jackforez/ktscorp/issues"
+  },
+  "homepage": "https://github.com/jackforez/ktscorp#readme"
 }

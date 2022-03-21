@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <base href="/">
+    <link rel="stylesheet" href="css/ustyle.css">
+    <!-- Boxicons CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <%- include('usidebar.ejs')%>
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <i class='bx bx-menu sidebarBtn'></i>
+                    <!-- <span class="dashboard">Dashboard</span> -->
+                </div>
+                <!-- <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div> -->
+                <div class="profile-details">
+                    <!--<img src="images/profile.jpg" alt="">-->
+                    <span>Xin chào</span>
+                    <span class="admin_name">
+                        <% if (typeof username !=='undefined' ) { %>
+                            <%=username%>
+                                <% } %>
+                    </span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </nav>
+            <div class="home-content">
+
+            </div>
+            <div class="content-header">
+                <h3>CREATE BILL</h3>
+            </div>
+
+            <% if (typeof mess !=='undefined' ) { %>
+                <h3>
+                    <%= mess%>
+                        <a class="btn btn-primary" href="/user/createstore" role=" button">LÀM NHÁY NỮA</a>
+                </h3>
+                <%} else { %>
+                    <div class="container">
+                        <form action="/user/createbill" method="POST">
+                            <h4>NGƯỜI NHẬN</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">TÊN</label>
+                                    <input type="text" class="form-control" id="inputEmail4"
+                                        placeholder="Tên người nhận" name="receivername">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Điện thoại</label>
+                                    <input type="text" class="form-control" id="inputPassword4"
+                                        placeholder="SĐT người nhận" name="receiverphone">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Địa chỉ người nhận" name="receiveraddress">
+                                </div>
+                            </div>
+                            <h4>THÔNG TIN HÀNG HOÁ</h4>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputAddress">Tên hàng hoá</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Tên hàng hoá"
+                                        name="itemname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Số lượng*</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Số lượng"
+                                        name="quantity">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Trọng lượng</label>
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                        placeholder="Trọng lượng (gram)" name="weight">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="inputCity">Dài</label>
+                                    <input type="text" class="form-control" id="inputCity" placeholder="(cm)"
+                                        name="dai">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="inputCity">Rộng</label>
+                                    <input type="text" class="form-control" id="inputCity" placeholder="(cm)"
+                                        name="rong">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="inputCity">Cao</label>
+                                    <input type="text" class="form-control" id="inputCity" placeholder="(cm)"
+                                        name="cao">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Tạo mới</button>
+                        </form>
+                    </div>
+                    <% } %>
+
+
+        </section>
+
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".sidebarBtn");
+            sidebarBtn.onclick = function () {
+                sidebar.classList.toggle("active");
+                if (sidebar.classList.contains("active")) {
+                    sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+                } else
+                    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        </script>
+
+</body>
+
+</html>

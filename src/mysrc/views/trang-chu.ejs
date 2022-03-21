@@ -42,62 +42,80 @@
                                             name="trackingNumber" pattern="[a-zA-Z0-9]+" required>
                                     </div>
                                     <div class="search-form">
-                                        <button class="btn" type="submit" id="vTrack">TRACK</button>
+                                        <button class="btn" type="submit" id="vTrack">Tra cứu</button>
                                     </div>
                                 </form>
                                 <!-- Hero Pera -->
-                                <div class="hero-pera">
-                                    <p>For order status inquiry: (KTS)xxx</p>
+                                <% if (typeof data !=='undefined' ) { %>
+                                    <div class="box">
+                                        <h3>Thông tin đơn hàng :</h3>
+                                        <%= data.billNumber%>
+                                            <%= data.status%>
+                                    </div>
+
+
+                                    <% } %>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider Area End-->
+            <!--? our info Start -->
+            <div class="our-info-area pt-70 pb-40">
+                <div class="container">
+                    <div class="row d-flex justify-content-between pb-70">
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center">
+                            <img src="assets/img/partners/vtp.png" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center">
+                            <img src="assets/img/partners/ghn.png" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex align-items-center">
+                            <img src="assets/img/partners/jnt.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-info mb-30">
+                                <div class="info-icon">
+                                    <i class="fi-xwlux3-phone kts-i"></i>
+                                </div>
+                                <div class="info-caption">
+                                    <p>HOTLINE</p>
+                                    <span>+ (84) 788 700 894</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-info mb-30">
+                                <div class="info-icon">
+                                    <i class="fi-cwlux3-clock kts-i"></i>
+                                </div>
+                                <div class="info-caption">
+                                    <p>Giờ làm việc</p>
+                                    <span>Thứ 2 - Thứ 6: 8h - 17h30</span>
+                                    <span>Thứ 7: 8h - 11h30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-info mb-30">
+                                <div class="info-icon">
+                                    <i class="fi-xwsux3-envelope kts-i"></i>
+                                </div>
+                                <div class="info-caption">
+                                    <p>Email</p>
+                                    <span>ktscorp@gmail.com</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- slider Area End-->
-        <!--? our info Start -->
-        <div class="our-info-area pt-70 pb-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-info mb-30">
-                            <div class="info-icon">
-                                <span class="flaticon-support"></span>
-                            </div>
-                            <div class="info-caption">
-                                <p>Lúc nào cũng OK anh êi</p>
-                                <span>+ (84) 927687589</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-info mb-30">
-                            <div class="info-icon">
-                                <span class="flaticon-clock"></span>
-                            </div>
-                            <div class="info-caption">
-                                <p>Giờ luyện công</p>
-                                <span>Mon - Sat 6.00 - 9.00 AM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-info mb-30">
-                            <div class="info-icon">
-                                <span class="flaticon-place"></span>
-                            </div>
-                            <div class="info-caption">
-                                <p>Đại bản doanh</p>
-                                <span>USA, New York - 10620</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- our info End -->
-        <!--? Categories Area Start -->
+            <!-- our info End -->
+            <!--? Categories Area Start -->
 
     </main>
     <footer>
@@ -142,7 +160,8 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-
+    <!-- Friconix -->
+    <script src="./assets/js/friconix.js"></script>
 </body>
 
 </html>
